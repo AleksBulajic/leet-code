@@ -208,7 +208,7 @@ console.log(greet("Emily"));
 console.log(greet("John"));
 
 /*
-Given a list of integers, determine whether the sum of its elements is odd or even.
+ 7. Given a list of integers, determine whether the sum of its elements is odd or even.
 
 Give your answer as a string matching "odd" or "even".
 
@@ -232,3 +232,12 @@ function oddOrEven(array) {
 console.log(oddOrEven([0, 1, 3]));
 console.log(oddOrEven([0, 2, 3]));
 console.log(oddOrEven([0, 3, 3]));
+
+
+/*
+8. An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+Example: (Input --> Output)
+
+"Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+*/
