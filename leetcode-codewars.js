@@ -94,7 +94,7 @@ console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "randomJunk"]))
 
 
 /*
- * Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+ * 5. Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
 
 * Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 */
@@ -112,3 +112,18 @@ console.log(loveFunc(1, 4)); // This should return true
 console.log(loveFunc(2, 2)); // This should return false
 console.log(loveFunc(3, 6)); // This should return true
 console.log(loveFunc(4, 8)); // This should return false
+
+
+/*
+ 6. Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+[Make sure you type the exact thing I wrote or the program may not execute properly]
+*/
+
+function greet(name){
+  return `Hello, ${name} how are you doing today?` 
+}
+
+console.log(greet("Alex"));
+console.log(greet("Emily"));
+console.log(greet("John"));
