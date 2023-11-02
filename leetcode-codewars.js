@@ -233,7 +233,6 @@ console.log(oddOrEven([0, 1, 3]));
 console.log(oddOrEven([0, 2, 3]));
 console.log(oddOrEven([0, 3, 3]));
 
-
 /*
 8. An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
@@ -245,7 +244,7 @@ Example: (Input --> Output)
 /*
  9. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
-You must write an algorithm with O(log n) runtime complexity.
+ if array is empty return -1
 
 Example 1:
 
@@ -260,3 +259,27 @@ Example 3:
 Input: nums = [1,3,5,6], target = 7
 Output: 4
 */
+
+function targetIndex(numbers, target) {
+  if (numbers.length === 0) {
+    return -1;
+  }
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === target) {
+      let index = numbers.indexOf(target);
+      return index;
+    } else if (numbers[i] !== target) {
+      numbers.push(target);
+      numbers.sort();
+      return numbers.indexOf(target);
+    } else {
+      return "somethig went wrong";
+    }
+  }
+}
+
+console.log(targetIndex([1, 3, 5, 6], 5));
+console.log(targetIndex([1, 3, 5, 6], 2));
+console.log(targetIndex([1, 3, 5, 6], 7));
+console.log(targetIndex([], 7));
