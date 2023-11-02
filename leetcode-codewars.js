@@ -240,6 +240,22 @@ Example: (Input --> Output)
 
 "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
 */
+function isIsogram(string) {
+  string = string.toLowerCase();
+  for (let i = 0; i < string.length; i++) {
+      for (let j = i + 1; j < string.length; j++) {
+          if (string[i] === string[j]) {
+              return false;
+          }
+      }
+  }
+  return true;
+}
+
+console.log(isIsogram("Dermatoglyphics")); // Expected output: true
+console.log(isIsogram("aba")); // Expected output: false
+console.log(isIsogram("moOse")); // Expected output: false
+console.log(isIsogram("Marko"));  // Expected output: true
 
 /*
  9. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
