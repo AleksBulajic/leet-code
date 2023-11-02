@@ -299,3 +299,14 @@ console.log(targetIndex([1, 3, 5, 6], 5));
 console.log(targetIndex([1, 3, 5, 6], 2));
 console.log(targetIndex([1, 3, 5, 6], 7));
 console.log(targetIndex([], 7));
+
+/*
+10.  Find Peak Element: Given an integer array, find a peak element, which is an element that is greater than its neighbors.
+
+Example:
+
+vbnet
+Copy code
+Input: nums = [1,2,1,3,5,6,4]
+Output: 1 or 5 (as both 2 and 6 are peaks)
+*/
