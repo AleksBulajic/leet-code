@@ -153,14 +153,11 @@ console.log(sumOfTwoSmallest([12, 25, 17, 31, 2]));
 
 function findNeedle(array) {
   for (let i = 0; i < array.length; i++) {
-    if (array[i] !== "needel") {
-      return "NO needel found";
+    if (array[i] === "needle") {
+      return `found the needle at position ${i}`;
     }
   }
-
-  let needle = array.indexOf("needle");
-  let result = `found the neelde at positiom ${needle}`;
-  return result;
+  return "NO needle found";
 }
 
 console.log(
