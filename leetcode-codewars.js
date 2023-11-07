@@ -191,9 +191,9 @@ console.log(loveFunc(3, 6)); // This should return true
 console.log(loveFunc(4, 8)); // This should return false
 
 /*
- 6. Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+ * 6. Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
 
-[Make sure you type the exact thing I wrote or the program may not execute properly]
+* [Make sure you type the exact thing I wrote or the program may not execute properly]
 */
 
 function greet(name) {
@@ -205,11 +205,11 @@ console.log(greet("Emily"));
 console.log(greet("John"));
 
 /*
- 7. Given a list of integers, determine whether the sum of its elements is odd or even.
+*  7. Given a list of integers, determine whether the sum of its elements is odd or even.
 
-Give your answer as a string matching "odd" or "even".
+* Give your answer as a string matching "odd" or "even".
 
-If the input array is empty consider it as: [0] (array with a zero).
+* If the input array is empty consider it as: [0] (array with a zero).
 */
 
 function oddOrEven(array) {
@@ -231,11 +231,11 @@ console.log(oddOrEven([0, 2, 3]));
 console.log(oddOrEven([0, 3, 3]));
 
 /*
-8. An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+* 8. An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
-Example: (Input --> Output)
+* Example: (Input --> Output)
 
-"Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+* "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
 */
 function isIsogram(string) {
   string = string.toLowerCase();
@@ -255,21 +255,21 @@ console.log(isIsogram("moOse")); // Expected output: false
 console.log(isIsogram("Marko"));  // Expected output: true
 
 /*
- 9. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+ * 9. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
- if array is empty return -1
+ * if array is empty return -1
 
-Example 1:
+* Example 1:
 
-Input: nums = [1,3,5,6], target = 5
+* Input: nums = [1,3,5,6], target = 5
 Output: 2
 Example 2:
 
-Input: nums = [1,3,5,6], target = 2
+* Input: nums = [1,3,5,6], target = 2
 Output: 1
 Example 3:
 
-Input: nums = [1,3,5,6], target = 7
+* Input: nums = [1,3,5,6], target = 7
 Output: 4
 */
 
@@ -298,7 +298,7 @@ console.log(targetIndex([1, 3, 5, 6], 7));
 console.log(targetIndex([], 7));
 
 /*
-10.  Find Peak Element: Given an integer array, find a peak element, which is an element that is greater than its neighbors.
+* 10.  Find Peak Element: Given an integer array, find a peak element, which is an element that is greater than its neighbors.
 
 Example:
 
