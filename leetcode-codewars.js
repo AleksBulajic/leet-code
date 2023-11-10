@@ -307,3 +307,32 @@ Copy code
 Input: nums = [1,2,1,3,5,6,4]
 Output: 1 or 5 (as both 2 and 6 are peaks)
 */
+
+function findPeakElement(nums) {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+      let mid = Math.floor((left + right) / 2);
+
+      if (nums[mid] > nums[mid + 1]) {
+          // If the element at mid is greater than its right neighbor,
+          // a peak element must be on the left side, including mid.
+          right = mid;
+      } else {
+          // If the element at mid is less than or equal to its right neighbor,
+          // a peak element must be on the right side, excluding mid.
+          left = mid + 1;
+      }
+  }
+
+  // At the end of the loop, 'left' and 'right' will be pointing to the peak element.
+  return left;
+}
+
+// Example usage:
+const nums = [1, 2, 1, 3, 5, 6, 4];
+const peakIndex = findPeakElement(nums);
+const peakElement = nums[peakIndex];
+
+console.log(`Peak Element: ${peakElement} at index ${peakIndex}`);
