@@ -348,3 +348,34 @@ function filter_list(list) {
 console.log(filter_list([1, 2, 'a', 'b']));     
 console.log(filter_list([1, 'a', 'b', 0, 15]));  
 console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  let vowelsNum = 0;
+
+  // Convert the input string to lowercase for case-insensitive matching
+  str = str.toLowerCase();
+
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < vowels.length; j++) {
+      if (str[i] === vowels[j]) {
+        vowelsNum++;
+        break; // Break out of the inner loop once a vowel is found
+      }
+    }
+  }
+
+  if (vowelsNum === 0) {
+    return 0;
+  }
+
+  return vowelsNum;
+  
+}
