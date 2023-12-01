@@ -349,7 +349,7 @@ console.log(filter_list([1, 2, 'a', 'b']));
 console.log(filter_list([1, 'a', 'b', 0, 15]));  
 console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
 
-// Return the number (count) of vowels in the given string.
+//  12 .Return the number (count) of vowels in the given string.
 
 // We will consider a, e, i, o, u as vowels for this Kata (but not y).
 
@@ -379,3 +379,23 @@ function getCount(str) {
   return vowelsNum;
   
 }
+
+// 13.  Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+// For example (Input -> Output):
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+var summation = function (num) {
+  let sum = 0;
+
+for (let i = 1; i <= num; i++) {
+  sum += i;
+}
+
+return sum;
+}
+
+console.log(summation(2));
+console.log(summation(8)); 
