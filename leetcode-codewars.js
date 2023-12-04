@@ -399,3 +399,20 @@ return sum;
 
 console.log(summation(2));
 console.log(summation(8)); 
+
+//  14. Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// The function takes a name as its only argument, and returns one of the following strings:
+
+// name + " plays banjo" 
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+
+// 15.Two Sum (Problem #1):
+// Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+// 16. Container With Most Water (Problem #11):
+// Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai), n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
+// 17. Maximum Subarray (Problem #53):
+// Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
