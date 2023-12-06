@@ -408,6 +408,22 @@ console.log(summation(8));
 // name + " plays banjo" 
 // name + " does not play banjo"
 // Names given are always valid strings.
+function banjoTime(name) {
+  // Convert the name to lowercase
+  const lowerCaseName = name.toLowerCase();
+
+  // Check if the first letter is 'r'
+  if (lowerCaseName[0] === 'r') {
+    return `${name} plays banjo`;
+  } else {
+    return `${name} does not play banjo`;
+  }
+}
+
+console.log(banjoTime("Rei"));     // Rei plays banjo
+console.log(banjoTime("Aleks"));   // Aleks does not play banjo
+
+
 
 
 // 15.Two Sum (Problem #1):
