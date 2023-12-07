@@ -465,7 +465,15 @@ console.log(twoSum(numbers, target));
 // Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
 function isPalindrome(integer){
+  integer = integer.toString()
+  let reversedInteger = integer.split('').reverse().join('');
 
+  if(reversedInteger === integer){
+    return true
+  }else{
+    return false
+  }
+ 
 }
 
 console.log(isPalindrome(121));  // Output: true
