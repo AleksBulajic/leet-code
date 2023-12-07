@@ -428,6 +428,26 @@ console.log(banjoTime("Aleks"));   // Aleks does not play banjo
 
 // 15.Two Sum (Problem #1):
 // Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+function twoSum(numbers, target) {
+  for (let i = 0; i < numbers.length; i++) {
+    let complement = target - numbers[i];
+
+    for (let j = i + 1; j < numbers.length; j++) {
+      if (numbers[j] === complement) {
+        return [i, j];
+      }
+    }
+  }
+
+  return "No two numbers match the target";
+}
+
+const numbers = [2, 7, 11, 15];
+const target = 9;
+
+console.log(twoSum(numbers, target));
+
 // 16. Container With Most Water (Problem #11):
 // Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai), n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
 // 17. Maximum Subarray (Problem #53):
