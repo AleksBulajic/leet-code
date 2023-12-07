@@ -484,3 +484,27 @@ console.log(isPalindrome(12321));
 //20 . Roman to Integer (#13):
 
 // Given a Roman numeral, convert it to an integer.
+function romanToInt(str){
+  const romanValues = {
+    'i': 1,
+    'v': 5,
+    'x': 10,
+    'l': 50,
+    'c': 100,
+    'd': 500,
+    'm': 1000,
+  };
+
+let result = 0;
+
+
+
+
+
+}
+
+console.log(romanToInt("III"));    
+console.log(romanToInt("IV"));    
+console.log(romanToInt("IX"));    
+console.log(romanToInt("LVIII"));  
+console.log(romanToInt("MCMXCIV"));
