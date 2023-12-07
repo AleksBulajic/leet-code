@@ -452,3 +452,27 @@ console.log(twoSum(numbers, target));
 // Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai), n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
 // 17. Maximum Subarray (Problem #53):
 // Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+//17 . Fizz Buzz (#412):
+
+// Write a program that outputs the string representation of numbers from 1 to n. But for multiples of three, output "Fizz" instead of the number, and for the multiples of five, output "Buzz." For numbers that are multiples of both three and five, output "FizzBuzz."
+
+// 18. Reverse Integer (#7):
+
+// Given a 32-bit signed integer, reverse its digits.
+//19.  Palindrome Number (#9):
+
+// Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+
+function isPalindrome(integer){
+
+}
+
+console.log(isPalindrome(121));  // Output: true
+console.log(isPalindrome(-121)); // Output: false
+console.log(isPalindrome(10));   // Output: false
+console.log(isPalindrome(1221)); // Output: true
+console.log(isPalindrome(12321));
+//20 . Roman to Integer (#13):
+
+// Given a Roman numeral, convert it to an integer.
