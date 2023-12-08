@@ -240,11 +240,11 @@ console.log(oddOrEven([0, 3, 3]));
 function isIsogram(string) {
   string = string.toLowerCase();
   for (let i = 0; i < string.length; i++) {
-      for (let j = i + 1; j < string.length; j++) {
-          if (string[i] === string[j]) {
-              return false;
-          }
+    for (let j = i + 1; j < string.length; j++) {
+      if (string[i] === string[j]) {
+        return false;
       }
+    }
   }
   return true;
 }
@@ -252,7 +252,7 @@ function isIsogram(string) {
 console.log(isIsogram("Dermatoglyphics")); // Expected output: true
 console.log(isIsogram("aba")); // Expected output: false
 console.log(isIsogram("moOse")); // Expected output: false
-console.log(isIsogram("Marko"));  // Expected output: true
+console.log(isIsogram("Marko")); // Expected output: true
 
 /*
  * 9. Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
@@ -313,17 +313,17 @@ function findPeakElement(nums) {
   let right = nums.length - 1;
 
   while (left < right) {
-      let mid = Math.floor((left + right) / 2);
+    let mid = Math.floor((left + right) / 2);
 
-      if (nums[mid] > nums[mid + 1]) {
-          // If the element at mid is greater than its right neighbor,
-          // a peak element must be on the left side, including mid.
-          right = mid;
-      } else {
-          // If the element at mid is less than or equal to its right neighbor,
-          // a peak element must be on the right side, excluding mid.
-          left = mid + 1;
-      }
+    if (nums[mid] > nums[mid + 1]) {
+      // If the element at mid is greater than its right neighbor,
+      // a peak element must be on the left side, including mid.
+      right = mid;
+    } else {
+      // If the element at mid is less than or equal to its right neighbor,
+      // a peak element must be on the right side, excluding mid.
+      left = mid + 1;
+    }
   }
 
   // At the end of the loop, 'left' and 'right' will be pointing to the peak element.
@@ -337,17 +337,15 @@ const peakElement = nums[peakIndex];
 
 console.log(`Peak Element: ${peakElement} at index ${peakIndex}`);
 
-
 // * 11. In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
-
 function filter_list(list) {
-  return list.filter(item => typeof item === 'number');
+  return list.filter((item) => typeof item === "number");
 }
 
-console.log(filter_list([1, 2, 'a', 'b']));     
-console.log(filter_list([1, 'a', 'b', 0, 15]));  
-console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+console.log(filter_list([1, 2, "a", "b"]));
+console.log(filter_list([1, "a", "b", 0, 15]));
+console.log(filter_list([1, 2, "aasf", "1", "123", 123]));
 
 //  12 .Return the number (count) of vowels in the given string.
 
@@ -361,7 +359,7 @@ function getCount(str) {
   // Convert the input string to lowercase for case-insensitive matching
   str = str.toLowerCase();
 
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const vowels = ["a", "e", "i", "o", "u"];
 
   for (let i = 0; i < str.length; i++) {
     for (let j = 0; j < vowels.length; j++) {
@@ -377,7 +375,6 @@ function getCount(str) {
   }
 
   return vowelsNum;
-  
 }
 
 // 13.  Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
@@ -390,22 +387,22 @@ function getCount(str) {
 var summation = function (num) {
   let sum = 0;
 
-for (let i = 1; i <= num; i++) {
-  sum += i;
-}
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
 
-return sum;
-}
+  return sum;
+};
 
 console.log(summation(2));
-console.log(summation(8)); 
+console.log(summation(8));
 
 //  14. Create a function which answers the question "Are you playing banjo?".
 // If your name starts with the letter "R" or lower case "r", you are playing banjo!
 
 // The function takes a name as its only argument, and returns one of the following strings:
 
-// name + " plays banjo" 
+// name + " plays banjo"
 // name + " does not play banjo"
 // Names given are always valid strings.
 function banjoTime(name) {
@@ -413,18 +410,15 @@ function banjoTime(name) {
   const lowerCaseName = name.toLowerCase();
 
   // Check if the first letter is 'r'
-  if (lowerCaseName[0] === 'r') {
+  if (lowerCaseName[0] === "r") {
     return `${name} plays banjo`;
   } else {
     return `${name} does not play banjo`;
   }
 }
 
-console.log(banjoTime("Rei"));     // Rei plays banjo
-console.log(banjoTime("Aleks"));   // Aleks does not play banjo
-
-
-
+console.log(banjoTime("Rei")); // Rei plays banjo
+console.log(banjoTime("Aleks")); // Aleks does not play banjo
 
 // 15.Two Sum (Problem #1):
 // Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -464,48 +458,56 @@ console.log(twoSum(numbers, target));
 
 // Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
-function isPalindrome(integer){
-  integer = integer.toString()
-  let reversedInteger = integer.split('').reverse().join('');
+function isPalindrome(integer) {
+  integer = integer.toString();
+  let reversedInteger = integer.split("").reverse().join("");
 
-  if(reversedInteger === integer){
-    return true
-  }else{
-    return false
+  if (reversedInteger === integer) {
+    return true;
+  } else {
+    return false;
   }
- 
 }
 
-console.log(isPalindrome(121));  // Output: true
+console.log(isPalindrome(121)); // Output: true
 console.log(isPalindrome(-121)); // Output: false
-console.log(isPalindrome(10));   // Output: false
+console.log(isPalindrome(10)); // Output: false
 console.log(isPalindrome(1221)); // Output: true
 console.log(isPalindrome(12321));
 //20 . Roman to Integer (#13):
 
 // Given a Roman numeral, convert it to an integer.
-function romanToInt(str){
+function romanToInt(str) {
   const romanValues = {
-    'i': 1,
-    'v': 5,
-    'x': 10,
-    'l': 50,
-    'c': 100,
-    'd': 500,
-    'm': 1000,
+    i: 1,
+    v: 5,
+    x: 10,
+    l: 50,
+    c: 100,
+    d: 500,
+    m: 1000,
   };
 
-let result = 0;
+  let result = 0;
 
-for(let i = 0; i < str.length;i++){
-let curentSymbol = str[i].toLowerCase()
-let currntSymboleValue = romanValues[curentSymbol]
+  for (let i = 0; i < str.length; i++) {
+    let curentSymbol = str[i].toLowerCase();
+    let currentSymbolValue = romanValues[curentSymbol];
+
+    if (
+      i < str.length - 1 &&
+      romanValues[str[i + 1].toLowerCase()] > currentSymbolValue
+    ) {
+      result -= currentSymbolValue;
+    } else {
+      result += currentSymbolValue;
+    }
+  }
+  return result;
 }
 
-}
-
-console.log(romanToInt("III"));    
-console.log(romanToInt("IV"));    
-console.log(romanToInt("IX"));    
-console.log(romanToInt("LVIII"));  
+console.log(romanToInt("III"));
+console.log(romanToInt("IV"));
+console.log(romanToInt("IX"));
+console.log(romanToInt("LVIII"));
 console.log(romanToInt("MCMXCIV"));
