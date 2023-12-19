@@ -446,6 +446,30 @@ console.log(twoSum(numbers, target));
 // Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai), n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
 // 17. Maximum Subarray (Problem #53):
 // Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+function maxSubArray(numsA) {
+  if (numsA.length === 0) {
+      return 0; // Handle empty array case
+  }
+
+  let maxSum = numsA[0];
+  let currentSum = numsA[0];
+
+  for (let i = 1; i < numsA.length; i++) {
+      // Update the current sum by taking the maximum of the current element and the sum so far
+      currentSum = Math.max(numsA[i], currentSum + numsA[i]);
+
+      // Update the maximum sum if the current sum is greater
+      maxSum = Math.max(maxSum, currentSum);
+  }
+
+  return maxSum;
+}
+
+// Example usage:
+const numsA = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+const result = maxSubArray(nums);
+console.log(result); // Output: 6
+
 
 //17 . Fizz Buzz (#412):
 
