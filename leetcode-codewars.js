@@ -465,7 +465,7 @@ function maxSubArray(numsA) {
   return maxSum;
 }
 
-// Example usage:
+
 const numsA = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 const result = maxSubArray(nums);
 console.log(result); // Output: 6
@@ -474,6 +474,36 @@ console.log(result); // Output: 6
 //17 . Fizz Buzz (#412):
 
 // Write a program that outputs the string representation of numbers from 1 to n. But for multiples of three, output "Fizz" instead of the number, and for the multiples of five, output "Buzz." For numbers that are multiples of both three and five, output "FizzBuzz."
+function fizzBuzz(n) {
+  const result = [];
+
+  for (let i = 1; i <= n; i++) {
+      let currentString = "";
+
+      if (i % 3 === 0) {
+          currentString += "Fizz";
+      }
+
+      if (i % 5 === 0) {
+          currentString += "Buzz";
+      }
+
+      // If the currentString is empty, append the number itself
+      if (currentString === "") {
+          currentString = i.toString();
+      }
+
+      result.push(currentString);
+  }
+
+  return result;
+}
+
+// Example usage:
+const n = 15;
+const resultA = fizzBuzz(n);
+console.log(resultA);
+
 
 // 18. Reverse Integer (#7):
 
