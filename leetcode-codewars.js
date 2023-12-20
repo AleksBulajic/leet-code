@@ -609,7 +609,13 @@ console.log(words)
 // named longWords that includes only the words with 7 or more
 // characters
 
-const longWords = words.filter(/* write an anonymous inline function here */);
-
+const longWords = words.filter(function(words){
+  if (words.length >= 7) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(longWords)
 // Check that logging longWords outputs
 // ["lengthy", "delicious"]
