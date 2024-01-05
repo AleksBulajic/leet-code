@@ -630,16 +630,20 @@ console.log(longWords)
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
 var uniqueInOrder=function(iterable){
+  //first i checked if the array is empty and if it is return empty array
   if(iterable.length === 0){
     return []
   }
-  
+  // here I initialezd the result array that will start form the 0 index of thew array
   let result = [iterable[0]]
-  
+  // here I initialez a loop of the same array where the i starts at index 1 
   for(let i = 1; i < iterable.length; i++){
+    // here i wrote a statement that checks if the i is equal to the previus index 
     if(iterable[i] !== iterable[i - 1]){
+    //if the statement is true which is that if the i those not equal the previsu i it will be pushed in the relut array 
       result.push(iterable[i])
     }
   }
+  //and here we return the varuable that holes the new array of the reults
   return result
 }
